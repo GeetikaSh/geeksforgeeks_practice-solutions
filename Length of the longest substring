@@ -1,0 +1,18 @@
+class Solution:
+    def longestUniqueSubsttr(self, S):
+        # code here
+        S1=" "
+        i=0
+        for x in S:
+            if S.index(x)==i:
+                S1+=x
+                i=i+1
+        return(len(S1))
+ if __name__== '__main__'
+    t=int(input())
+    for_ in range(t):
+       s=input().strip()
+       
+       
+       ob=Solution()
+       print(ob.longestUniqueSubsttr(s))
