@@ -1,0 +1,30 @@
+#User function Template for python3
+from collections import deque
+class Solution:
+    
+    #Function to find if there is a celebrity in the party or not.
+    def celebrity(self, M, n):
+        # code here 
+        stack = deque()
+        for i in range (n):
+            stack.append(i)
+        
+        while (len(stack)>=2):
+            x=stack.pop()
+            y=stack.pop()
+            if M[x][y]==1:
+                #since x knows y, ie x is not a celebrity
+                stack.append(y)
+            elif M[y][x]==1:
+                #y is not a celebrity
+                stack.append(x)
+        pot=stack.pop()
+        for j in range (n):
+            if (j!=pot):
+                if ((M[j][pot]==0) or (M[pot][j]==1)):
+                    pot=-1
+        return(pot)
+           
+                        
+        
+       
