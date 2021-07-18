@@ -1,0 +1,46 @@
+'''
+There is a large pile of socks that must be paired by color. Given an array of integers representing the color of each sock, determine how many pairs of socks with matching colors there are.
+Function Description
+
+Complete the sockMerchant function in the editor below.
+
+sockMerchant has the following parameter(s):
+
+int n: the number of socks in the pile
+int ar[n]: the colors of each sock
+Returns
+
+int: the number of pairs
+Sample Input
+
+STDIN                       Function
+-----                       --------
+9                           n = 9
+10 20 20 10 10 30 50 10 20  ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+Sample Output
+
+3
+
+
+There are three pairs of socks: (10+10),(20+20),(10+10).
+'''
+import math
+import os
+import random
+import re
+import sys
+from collections import Counter
+n=int(input())
+arr=list(map(int,input().strip().split()))
+for i in range(len(arr)):
+    l=Counter(arr)
+
+
+a=list(l.values())
+
+x=0
+for j in range(len(a)):
+    x=int((a[j]/2))+x
+    
+    
+print(x)
