@@ -1,0 +1,20 @@
+###Given two strings, one is a text string, txt and other is a pattern string, pat. 
+The task is to print the indexes of all the occurences of pattern string in the text string. For printing, Starting Index of a string should be taken as 1.###
+
+class Solution:
+      
+
+  
+    def search(self, pat, txt):
+        l=[]
+        n=len(pat)
+        x=[]
+        
+        for i in range(len(txt)-(n-1)):
+            x=txt[i:(n+i)]
+            if x==pat:
+                l.append(i+1)
+        return(l)   
+                
+            
+
